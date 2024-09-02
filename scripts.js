@@ -51,3 +51,4 @@ function toggleMenu() {
     const navLinks = document.querySelector('.nav-left');
     navLinks.classList.toggle('active');
 };
+

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4D-Planungsbüro</title>
     <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function validateForm() {
+            var checkbox = document.getElementById("datenschutz");
+            if (!checkbox.checked) {
+                alert("Bitte bestätigen Sie die Datenschutzerklärung.");
+                return false; // Prevents form submission
+            }
+            return true; // Allows form submission
+        }
+
+        // Attach validateForm function to form's onsubmit event
+        var form = document.getElementById('contactForm');
+        form.onsubmit = validateForm;
+    });
+    </script>
 </head>
 <body>
 
@@ -16,10 +33,10 @@
         <div></div>
     </div>
     <ul class="nav-left">
+        <li><a class="nav-link" href="#slideshow"><i class="fas fa-home"></i></a></li>
         <li><a class="nav-link" href="#about">Über uns</a></li>
         <li><a class="nav-link" href="#services">Unser Angebot</a></li>
         <li><a class="nav-link" href="#projects">Projekte</a></li>
-        <li><a class="nav-link" href="#testimonials">Testimonial</a></li>
         <li><a class="nav-link" href="#contact">Kontakt</a></li>
     </ul>
     <div class="logo">
@@ -29,10 +46,10 @@
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
+        <li><a class="nav-link" href="#home">Home</a></li>
         <a href="#about">Über uns</a>
         <a href="#services">Unser Angebot</a>
         <a href="#projects"> Projekte </a>
-        <a href="#testimonials"> Testimonial </a>
         <a href="#contact"> Kontakt </a>
 
     </div>
@@ -52,7 +69,7 @@
 
     <!-- Logo Overlay -->
     <div class="logo-overlay">
-        <img src="logo_white.jpeg" alt="Logo">
+        <img src="logo.png" alt="Logo">
     </div>
 
     <!-- Dots for Navigation -->
@@ -87,7 +104,7 @@
                 </div>
                 <div class="service">
                     <h3> Innenarchitektur </h3>
-                    <p>Kreative und maßgeschneiderte Lösungen für Wohn-, Büro- und Gewerbeflächen, die Ihren Anforderungen und Wünschen gerecht werden.</p>
+                    <p>Kreative und maßgeschneiderte Lösungen für Bäckerei- und Metzgereihandwerk sowie Gastronomie und Hotellerie, die Ihren Anforderungen und Wünschen gerecht werden.</p>
                 </div>
                 <div class="service">
                     <h3> Projektmanagement </h3>
@@ -105,16 +122,23 @@
     		<div class="column">
 
 		<div class="project-item">
-                    	<img src="project1.jpeg" alt="Project 1">
+                    	        <a href="bäckereien.html">
+            <img src="project1.jpeg" alt="Project 1">
+        </a>
                     	<div class="project-info">
-                        <h3>Brotrebellen, Memmingen</h3>
+                        <h3>Bäckereien</h3>
                     	</div>
                 </div>
+                </div>
+
+    		<div class="column">
 
                 <div class="project-item">
-                    <img src="project2.jpeg" alt="Project 2">
+                            <a href="metzgereien.html">
+            <img src="project2.jpeg" alt="Project 2">
+        </a>
                     <div class="project-info">
-                        <h3>Aromabäcker, Rennertshofen</h3>
+                        <h3>Metzgereien</h3>
                     </div>
                 </div>
 
@@ -123,9 +147,11 @@
     		<div class="column">
 
                 <div class="project-item">
-                    <img src="project3.jpeg" alt="Project 3">
+                            <a href="hotelgastro.html">
+            <img src="project3.jpeg" alt="Project 3">
+        </a>
                     <div class="project-info">
-                        <h3>Bachbauernhof, Augsburg</h3>
+                        <h3>Hotel/Gastronomie</h3>
                     </div>
                 </div>
 
@@ -135,30 +161,41 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section_bg">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial">
-                <p>"The team at Design Your Space transformed our home into a beautiful sanctuary. Their attention to detail and creativity exceeded our expectations!"</p>
-                <h3>- Client Name</h3>
-            </div>
-            <div class="testimonial">
-                <p>"Our office now reflects our brand perfectly thanks to the expert designers at Design Your Space. Highly recommend!"</p>
-                <h3>- Client Name</h3>
-            </div>
-            <!-- Add more testimonials as needed -->
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section_bg">
             <h2>Schreiben Sie uns!</h2>
-            <div class="contact">
-            <form action="submit_form.php" method="POST">
+            
+	   <div class="contact-container">
+	    <div class="profile">
+		<img src="profile.jpeg" alt="Profile Picture" class="profile-picture">
+		<p>Jürgen Engelhardt, Dipl. Ing.</p>
+
+		 <ul>
+                <li>Email: <a href="mailto:juergen.engelhardt@example.com">juergen.engelhardt@example.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+12 345 678 90</a></li>
+                <li>Address: Musterstraße 123, 12345 Musterstadt</li>
+                 </ul>
+
+                <div class="social-media">
+                <a href="https://www.linkedin.com/in/jürgen-engelhardt-006827147/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/juergenengelhardt" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                </div>
+
+
+	    </div>
+            <form action="submit_form.php" method="POST", class = "contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
+    <div class="checkbox-container">
+        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+        <label for="datenschutz">Ich habe die <a href="datenschutzerklaerung.html" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+    </div>
                 <button type="submit">Send Message</button>
             </form>
 	   </div>
@@ -175,6 +212,12 @@
         <div class="container">
             <p>&copy; 2024 Moritz Engelhardt. All rights reserved.</p>
         </div>
+	<div class="Datenschutz">
+        <p><a href="datenschutz.html" class="footer-link">Datenschutz</a></p>
+	</div>
+	<div class="Impressum">
+        <p><a href="impressum.html" class="footer-link">Impressum</a></p>
+	</div>
     </footer>
 
 
