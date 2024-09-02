@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Design Company</title>
+    <title>4D-Planungsbüro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,6 +27,16 @@
     </div>
 </nav>
 
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#about">Über uns</a>
+        <a href="#services">Unser Angebot</a>
+        <a href="#projects"> Projekte </a>
+        <a href="#testimonials"> Testimonial </a>
+        <a href="#contact"> Kontakt </a>
+
+    </div>
+
     <!-- Slideshow Section -->
     <section id="slideshow" class="slideshow-container">
         <div class="slideshow-container">
@@ -42,7 +52,7 @@
 
     <!-- Logo Overlay -->
     <div class="logo-overlay">
-        <img src="logo.png" alt="Logo">
+        <img src="logo_white.jpeg" alt="Logo">
     </div>
 
     <!-- Dots for Navigation -->
@@ -92,25 +102,35 @@
         <div class="container">
             <h2>Projekte</h2>
             <div class="project-gallery">
-                <div class="project-item">
-                    <img src="project1.jpeg" alt="Project 1">
-                    <div class="project-info">
+    		<div class="column">
+
+		<div class="project-item">
+                    	<img src="project1.jpeg" alt="Project 1">
+                    	<div class="project-info">
                         <h3>Brotrebellen, Memmingen</h3>
-                    </div>
+                    	</div>
                 </div>
+
                 <div class="project-item">
                     <img src="project2.jpeg" alt="Project 2">
                     <div class="project-info">
                         <h3>Aromabäcker, Rennertshofen</h3>
                     </div>
                 </div>
+
+                </div>
+
+    		<div class="column">
+
                 <div class="project-item">
                     <img src="project3.jpeg" alt="Project 3">
                     <div class="project-info">
                         <h3>Bachbauernhof, Augsburg</h3>
                     </div>
                 </div>
-                <!-- Add more projects as needed -->
+
+                </div>
+
             </div>
         </div>
     </section>
@@ -133,19 +153,21 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section_bg">
-        <div class="container">
             <h2>Schreiben Sie uns!</h2>
+            <div class="contact">
             <form action="submit_form.php" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
-        </div>
+	   </div>
     </section>
 
-    <section id="secton_footer" class="section_footer">
-        <img src="logo_white.jpeg" alt="Logo">
+    <section id="section_footer" class="section_footer">
+       	<div class="section_footer"> 
+		<img src="logo_white.jpeg" alt="Logo">
+	</div>
     </section>
 
     <!-- Footer Section -->
@@ -156,6 +178,6 @@
     </footer>
 
 
-	<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
