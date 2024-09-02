@@ -25,9 +25,40 @@ Body p {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Ensure navbar is on top */
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1001; /* Ensure navbar is on top */
 }
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1002; /* Ensure it stays above the sidebar */
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease; /* Smooth transformation */
+}
+
+/* Change burger menu to X when active */
+.burger-menu.change div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.change div:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.burger-menu.change div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
 
 .nav-left {
     list-style-type: none;
@@ -38,7 +69,6 @@ Body p {
 
 }
 
-/* Navigation Link Styles */
 .nav-left .nav-link,
 .nav-left .nav-link:visited,
 .nav-left .nav-link:hover,
@@ -346,4 +376,113 @@ footer {
     Justify-content: center;
     padding: 20px 0;
 
+}
+
+@media (max-width: 900px) {
+    Body h2 {
+    font-size: 20px;
+
+	}
+
+	Body p {
+    	font-size: 18px;
+    	text-decoration: none;
+
+	}
+
+	.section_bg {
+   	 background: #4e4e4e;
+   	 Color: white;
+   	 padding: 20px;
+   	 heightMin: 400px;
+	}
+
+.section_bg h2{
+	color: #eb811a;
+	font-size: 30px;
+	padding-bottom: 5px;
+}
+
+
+.service-list {
+    display: flex;
+        flex-direction: column;
+	align-content: center;
+
+    justify-content: space-around;
+}
+
+.project-gallery {
+	align-content: center;
+jusitfy-content: center;
+    display: flex;
+        flex-direction: column;
+
+    justify-content: space-around;
+}
+
+.service {
+    text-align: center;
+    width: 100%;
+
+}
+
+.service h3 {
+    Font-size: 20px;
+    Text-decoration: bold;
+}
+
+
+
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        left: 10px; /* Align to the left side */
+    }
+    
+    .nav-left {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Initially off-screen */
+        height: 100%;
+        width: 250px; /* Sidebar width */
+        flex-direction: column;
+        background-color: #000000; /* Set background to black */
+        color: #ffffff; /* Set text color to white */
+        transition: left 0.3s ease;
+        z-index: 1000; /* Ensure it's above the main content */
+    }
+
+.nav-left li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.nav-left .nav-link {
+    color: #ffffff; /* Ensure the text is white */
+    font-size: 18px; /* Adjust size for readability */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure links take up the full width */
+}
+    .nav-left.active {
+        left: 0; /* Slide in the sidebar */
+    }
+
+    .nav-left .nav-link {
+        color: #ffffff; /* Ensure the text is white */
+    }
+
+    .navbar .logo {
+        order: 1;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .slide img {
+    }
+
+    .caption {
+        font-size: 18px; /* Smaller caption text */
+    }
 }
