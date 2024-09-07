@@ -52,3 +52,45 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 };
 
+
+//Image Gallery
+
+let currentSlide = 0;
+
+// Open the gallery
+function openGallery() {
+    document.getElementById("galleryOverlay").style.display = "flex";
+    showSlide(currentSlide);
+}
+
+// Close the gallery
+function closeGallery() {
+    document.getElementById("galleryOverlay").style.display = "none";
+}
+
+// Change slide by a given offset (e.g. -1 for previous, 1 for next)
+function changeSlide(offset) {
+    const slides = document.getElementsByClassName("gallery-image");
+    currentSlide += offset;
+
+    // Loop back to the first slide if out of bounds
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
+}
+
+// Display the current slide
+function showSlide(slideIndex) {
+    const slides = document.getElementsByClassName("gallery-image");
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    // Show the selected slide
+    slides[slideIndex].style.display = "block";
+}

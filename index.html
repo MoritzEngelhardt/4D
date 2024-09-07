@@ -69,7 +69,7 @@
 
     <!-- Logo Overlay -->
     <div class="logo-overlay">
-        <img src="logo.svg" alt="Logo">
+        <img src="logo.png" alt="Logo">
     </div>
 
     <!-- Dots for Navigation -->
@@ -120,12 +120,33 @@
             <h2>Projekte</h2>
 
 	    <div class="project-spotlight">
-	    <h3>Aktuell</h3>
-		<div class="spotlightproject">
-			<p>Text Text Text</p>
-			<img src= "aktuell1.jpg" alt="Aktuell 1" >
-			<img src= "aktuell2.jpg" alt="Aktuell 2" >
-			<img src= "aktuell3.jpg" alt="Aktuell 3" >
+	    <div class="text-container">
+            <h3>Aktuell</h3>
+            <p>Text Text Text</p>
+        </div>
+
+        <!-- Single Image -->
+        <div class="image-container">
+            <img src="Aktuell/aktuell1.jpg" alt="Thumbnail Image" id="mainImage" onclick="openGallery()" class="expandable">
+        </div>
+
+    <!-- Image Gallery (hidden initially) -->
+    <div id="galleryOverlay" class="overlay">
+        <span class="close-btn" onclick="closeGallery()">&times;</span>
+
+        <!-- Gallery Images -->
+        <div class="gallery-container">
+			<img src= "Aktuell/aktuell1.jpg" alt="Aktuell 1" class="gallery-image">
+			<img src= "Aktuell/aktuell2.jpg" alt="Aktuell 2" class="gallery-image">
+			<img src= "Aktuell/aktuell3.jpg" alt="Aktuell 3" class="gallery-image">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+
 		</div>
 	    </div>
             <div class="project-gallery">
