@@ -252,7 +252,12 @@ body p {
 .section_bg h2 {
     color: #eb811a;
     font-size: 36px;
-    padding-bottom: 20px;
+}
+
+.section_bg h3 {
+  font-size: 28px;
+  Padding-left: 20px;
+  Margin-bottom:0;
 }
 
 .service-list {
@@ -322,25 +327,67 @@ background: grey;
 .project-gallery {
  display: flex;
     justify-content: space-between; /* Optional: add space between columns */
+
+
+}
+.project-container {
     gap: 20px; /* Add space between columns */
     overflow: hidden;
-
-}
-
-.project-gallery img {
-	width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
     height: auto;
-
-    transition: transform 0.2s ease;
-	border-radius: 10px;
-object-fit: cover; /* Ensures the image covers the container fully without distorting the aspect ratio */
-    display: block; /* Remove bottom margin/gap caused by inline-block */
-
+    transition: transform 0.3s ease; /* Smooth out the transition */
+    position: relative;
+    z-index: 1; /* Ensure hover effect appears above other elements */
+    border-radius: 10px; /* Adds rounded corners */
 
 }
 
-.project-gallery img:hover {
+.project-container img {
+    width: 100%;
+    height: 100%; /* Ensures the image fills the container height */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio while covering the entire container */
+    display: block; /* Remove bottom margin/gap caused by inline-block */
+    border: none; /* Remove any border */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
     transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ensure smooth animation */
+}
+
+.project-container img:hover {
+    transform: scale(1.05); /* Add hover effect to image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow to image */
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-container:hover .project-info {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */}
+
+.project-info h3 {
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -588,6 +635,8 @@ Footer a .hover {
 
 .grid-item {
     display: contents; /* This allows the items to flow in a single row without wrapping */
+    transition: transform 0.3s ease; /* Smooth out the transition */
+
 }
 
 .grid-item img {
@@ -595,6 +644,9 @@ Footer a .hover {
     height: auto;
     border-radius: 8px; /* Optional: Add rounded corners to images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+    transition: transform 0.3s ease; /* Smooth out the transition */
+
+
 }
 
 .text-block {
